@@ -1,0 +1,694 @@
+/*---CSS RESET---*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+   text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*---ALL---*/
+
+body {
+   font-family: "Noto Sans", "Microsoft JhengHei";
+   line-height: 1.6;
+}
+
+.container{
+   margin: 0px auto;
+   width: 320px;
+}
+
+img{
+   max-width: 100%;
+   height: auto;
+}
+
+
+
+.logo a {
+   text-align: center;
+   font-family: 'Noto Serif Display', serif;
+   font-size: 32px;
+   font-weight: bolder;
+   color:#3E5C45;}
+
+
+@media (min-width:767px) {
+   .container{
+      margin: 0px auto;
+      width: 767px;
+      /* border: 1px solid salmon; */
+      }
+}
+
+@media (min-width:768px) {
+   .container{
+      margin: 0px auto;
+      width: 768px;
+      /* border: 1px solid salmon; */
+      }
+   
+}
+
+@media (min-width:960px) {
+   .container{
+      margin: 0px auto;
+      width: 960px;
+      /* border: 1px solid salmon; */
+      }
+}
+
+/*---LAYOUT START---*/
+/*---實戰技巧1:實現區塊置中的滿版版型的方法
+ Step1.HTML結構當中header、main、footer內都裝container
+ Step2.container設定margin: 0px auto; 以及 width: 768px;
+ Step3.header、main、footer各設置背景色彩
+---*/
+
+/*---LAYOUT HEADER 佈局:頂部---*/
+header{   
+   background-color: #e4ede5;
+   box-shadow: 3px 3px 5px rgb(226, 226, 226);
+
+}
+
+header .container {
+   display: flex;
+   justify-content:space-between;
+   
+}
+
+
+header .nav{
+   display: none;
+}
+
+header .nav ul{
+   display: none;
+}
+
+@media (min-width:767px) {
+   header .nav{display: none;}
+}
+
+
+@media (min-width:768px) {
+}
+
+@media (min-width:960px) {
+   header .nav{
+      display: flex;
+      align-items:end;
+   }
+   
+   header .nav a{
+      display:block;
+      padding:10px 15px; 
+      color: #3E5C45;
+      font-weight: bold;
+      border-bottom:3px solid #EBF1ED;
+   }
+   
+   header .nav a:hover {
+      color: hsl(0, 0%, 0%);
+      background-color: #F3F6EF;
+      border-bottom:3px solid #ff9900;
+   }
+}
+
+
+
+/*---LAYOUT FOOTER 佈局:頁尾---*/
+
+footer{
+    background-color:#EBF1ED;
+    color: #3E5C45;
+    padding-top: 20px ;
+}
+
+footer .container{
+   display: flex;
+   flex-direction:column;
+   justify-content:start;
+   
+}
+
+.branchinfo{
+   display: flex;
+   flex-direction:row;
+   justify-content:space-between;
+   
+}
+
+.snsBtn{
+   align-items: center;
+   padding: 20px ;
+   margin: 0 auto;
+   display: flex;
+   align-items:end;
+   list-style:none;   
+}
+
+.snsBtn  a{ 
+   color: #3E5C45;
+   padding: 0 10px;}
+.snsBtn .sns_fb{font-size: 29px;}
+.snsBtn .sns_ig{font-size: 31px;}   
+.snsBtn .sns_line{font-size: 27.5px;}
+.snsBtn .sns_fb:hover{color: #3784ff;}
+.snsBtn .sns_ig:hover{color: #b937ff;}
+.snsBtn .sns_line:hover{color: #62ff37;}
+
+
+/*---LAYOUT Copyright 佈局:版權所有---*/
+.copyRight{
+   background-color: #3E5C45;
+}
+.copyRight .container{
+   text-align: center;
+   color: rgb(255, 255, 255);
+   padding: 5px 0;
+}
+
+/*---LAYOUT END---*/
+
+/*---INDEX---*/
+/*---INDEX MAIN START---*/
+main .container{
+   padding-top: 30px;
+   padding-bottom: 60px;
+}
+
+.bannerArea{
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-image:url(../images/banner01.png);
+   background-color: #ffffff;
+   height: 400px ;
+   background-color: #F3F6EF;
+}
+.banner{
+   width: 960px;
+   margin: 0 auto;
+}
+
+
+.banner h1{
+   line-height: 1.3;
+   font-size: 48px;
+   letter-spacing:3px;
+   color: #1c291f;
+   font-weight: bold;
+   padding:90px 0px 30px 60px;
+   }
+
+.banner-Btn 
+{  
+   display: block;
+   width: 150px;
+   border-radius:50px;
+   padding: 5px 0;
+
+   border: 2px solid #3E5C45 ;
+   color: #ffffff;
+   background-color: #3E5C45 ;
+   font-weight: bold;
+   text-align: center;
+   margin-left: 60px;
+}
+
+.banner-Btn:hover
+{  
+   color: #3E5C45;
+   background-color: #ffffff;
+
+}
+
+.recommand .container{
+   display: flex;
+   flex-direction:column;
+}
+.recommand h2{
+   letter-spacing:1px;
+   color: #3E5C45;
+   font-weight: bold;
+   font-size: 28px;
+   text-align: center;
+}
+
+.productList{
+   display: flex;
+   flex-wrap: wrap;
+   margin-bottom: 20px;
+}
+.productList li
+{
+   height: 200px;
+   width: 31%;
+   margin: 1%;
+   background-color: #3784ff;
+}
+.productList img
+{
+   width: 100%;
+   height: 100%;   
+}
+
+.p-Btn 
+{  
+   margin: 0 auto;
+   width: 150px;
+   border-radius:50px;
+   border: 2px solid #3E5C45 ;
+   padding: 5px 0;
+
+   color: #ffffff;
+   background-color: #3E5C45;
+   font-weight: bold;
+   text-align: center;
+}
+
+.p-Btn:hover
+{  
+   color: #3E5C45;
+   background-color: #ffffff;
+
+}
+/*---INDEX MAIN END---*/
+
+
+/*---BRAND---*/
+/*---BRAND MAIN START---*/
+
+.brand{
+   background-color: #F5F9F9;
+   
+}
+
+.brand img{
+   display: block;
+   margin: 0 auto;
+   height: 80%;
+}
+.brand h2{
+   text-align: center;
+   font-size: 28px;
+   font-weight: bold;
+   letter-spacing: 2px;
+   color: #3E5C45;
+   margin-top: 10px;
+}
+
+.storyArea{
+   display: flex;
+}
+
+.storyArea img{display: block;}
+
+.storyContent{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 0 50px;
+}
+
+.story h2{
+   font-size: 24px;
+   font-weight: bold;
+   letter-spacing: 0px;
+   color: #000000;
+   margin: 10px 0;
+}
+
+.story p{
+   font-size: 16px;
+   letter-spacing: 0px;
+   color: #000000;
+   margin: 10px 0;
+   text-indent: 2em;
+}
+
+.share a
+{
+   color: #3E5C45;
+   font-weight: bold;
+   margin:5px;
+
+}
+.share a:hover
+{
+   color: #ff9900;
+}
+
+/*---BRAND MAIN END---*/
+
+/*---STORE---*/
+/*---STORE MAIN START---*/
+.store {
+   display: flex;   
+   justify-content: space-between;
+   margin: 0 auto;
+}
+
+
+/*產品分類*/
+
+.catalog li{
+   text-align: center;
+
+}
+
+
+.catalog .top{
+   background-color: #eefff2;
+   color: #ffffff;
+   border-radius: 4px 4px 0 0 ;
+   border: 1px solid #3E5C45;
+   background-color: #3E5C45;
+}
+
+.catalog .top p{
+   color: #ffffff;
+   font-weight: bold;
+   padding: 5px 0;
+
+}
+
+.catalog a{
+   display: block;
+   color: #3E5C45;
+   font-size: 14px;
+   font-weight: bold;
+   padding: 6px 40px;
+   border: 1px solid #F3F6EF;
+   white-space:nowrap;
+}
+.catalog a:hover{
+   background-color: #F3F6EF;
+   color: #3E5C45;
+}
+
+
+
+
+
+/*產品瀏覽*/
+
+.productView
+{
+   padding: 0 5px ;
+   display: flex;  
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
+
+.product {
+   display: flex;
+   margin-bottom: 10px ;
+   flex-direction: column;
+   border: 1px solid #e7eeea;
+   width: 48%;
+}
+
+.product img{
+   width: 100%;
+   height: 230px;
+   margin: 0 auto;
+}
+
+.productContent{   
+   display: flex; 
+   justify-content: space-between; 
+   align-items: center;
+   padding:5px ;
+}
+
+.productContent h4{
+   margin: 0 auto;
+   color:#3E5C45;
+   font-size: 15px;
+   font-weight: bold;
+}
+
+.productContent p{
+   margin: 0 auto;
+   color:#3E5C45;
+   font-size: 13px;
+   font-weight: bold;
+}
+
+
+.product a {
+   padding:5px 0 ;
+   display: block;
+   text-align: center;
+   background-color: #F5F9F9;
+   color:#3E5C45;
+   font-weight: bold;
+}
+
+.product a:hover{
+   background-color: #e8ebe4;;
+}
+
+
+   
+/*訂單內容*/
+.order{
+   border: 1px solid #e8ebe4 ;
+   border-radius: 3px 3px 0 0 ;
+   margin-bottom: 10px;
+}
+
+.order h2 ,.shopList h2{
+   background-color: #e8ebe4;
+   padding: 5px 80px;
+   text-align: center;
+   color:#3E5C45;
+   font-weight: bold;
+   border-radius: 3px 3px 0 0 ;
+   white-space:nowrap;
+}
+
+
+.order{
+   border-radius: 4px  ;
+   border: 1px solid #e8ebe4 ;
+}
+.order p, .shopList p{
+   color: #3E5C45;
+   font-size: 15px;
+
+}
+
+.subtotal,.delivery,.total{
+   padding: 5px 5px;   
+   display: flex;
+   justify-content: space-between;
+}
+
+.order  .price{
+   text-align: center;
+}
+
+.order .total p{
+   font-weight: bold;
+   font-size: 16px;
+}
+
+
+.shopList{
+   border-radius: 4px  ;
+   border: 1px solid #e8ebe4 ;
+}
+
+.listItem{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 5px 10px;
+
+}
+.listItem img{
+   width: 90px;
+   height: 60px;
+   margin: 5px;
+}
+
+.listItem .price{
+   font-weight: bold;
+   font-size: 16px; 
+}
+
+
+/*---STORE MAIN END---*/
+
+/*---QA---*/
+/*---QA MAIN START---*/
+.qa {
+   display: flex;
+   justify-content: space-between;
+}
+.qa li{
+   padding: 10px;
+   width: 30%;
+}
+
+.qa li h3{
+   font-size: 32px;
+   letter-spacing: 0px;
+   color: #3E5C45;
+   font-weight: bold;
+   text-align: center;
+   padding: 30px 0;
+   background-color: #F3F6EF;
+   border-radius:5px 5px 0px 0px;
+}
+
+.content-outside{
+   height: 300px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   margin-bottom: 30px;
+}
+
+.content-inside{
+   padding: 10px;
+   border: 1px solid #e8ebe4 ;
+   border-radius:0px 0px 5px 5px;
+   margin-bottom: 30px;
+   height: 300px;
+}
+.content-inside h4{
+   font-size: 20px;
+   font-weight: bold;
+   letter-spacing: 0px;
+   color: #000000;
+   margin: 5px 0;
+   padding: 0px 10px;
+
+}
+.content-inside p{
+   font-size: 16px;
+   letter-spacing: 0px;
+   color: #000000;
+   padding: 0px 10px;
+}
+
+.qa-Btn p {
+   margin: 0 auto;
+   width: 150px;
+   border-radius:50px;
+   border: 2px solid #3E5C45 ;
+   padding: 5px 0;
+
+   color: #ffffff;
+   background-color: #3E5C45;
+   font-weight: bold;
+   text-align: center;
+   display: block;
+}
+.qa-Btn p:hover
+{  
+   color: #3E5C45;
+   background-color: #ffffff;
+}
+/*---QA MAIN END---*/
+
+/*---CONTACT---*/
+/*---CONTACT MAIN START---*/
+
+.contactArea{
+background-image: url("../images/aditya-joshi-bbAsuHZvWyY-unsplash.jpg");
+}
+
+.contactArea .container{
+   display: flex;
+   justify-content: space-between;
+   margin: 0px auto;
+   }
+   
+
+.contactArea .logo{
+   display: block;
+   text-align: center;
+   padding: 130px 0px ;
+   background-color: rgba(232,235,228,0.9);
+   border-radius:8px;
+   width: 50%;
+}
+
+.contactArea .logo img{
+   width: 50%;
+}
+
+.content{
+   background-color: rgba(232,235,228,0.9);
+   border-radius:8px;
+   margin:0 15px;
+   width: 50%;
+   padding:130px 40px;
+}
+
+.content h3{
+   color: #3E5C45;
+   font-weight: bold;
+   font-size: 24px;
+   padding-bottom:10px ;
+}
+
+.content p{
+   padding-bottom:10px ;
+}
+
+.content h4{
+   color: #3E5C45;
+   font-weight: bold;
+   font-size: 16px;
+   padding-top:30px ;
+}
+/*---CONTACT MAIN END---*/
